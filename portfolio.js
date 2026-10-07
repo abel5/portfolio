@@ -27,6 +27,7 @@ document.addEventListener("click", (event) => {
 
     if (!clickedInsideMenu && !clickedMenuButton) {
         navLinks.classList.remove("active");
+         menuIcon.textContent = "menu";
     }
 });
 
@@ -37,6 +38,7 @@ window.addEventListener("scroll", () => {
         header.classList.add("scrolled");
     } else {
         header.classList.remove("scrolled");
+
     }
 });
 
