@@ -43,6 +43,7 @@ img {
     display: flex;
     align-items: center;
     text-decoration: none;
+    outline: none;
 }
 
 .logo img {
@@ -465,6 +466,26 @@ img {
     color: var(--text);
 }
 
+header.scrolled {
+    background-color: rgba(11, 15, 20, 0.9);
+    border-bottom: 1px solid #1F2937;
+    backdrop-filter: blur(10px);
+}
+
+.nav-links a.active {
+    color: var(--text);
+}
+
+.nav-links a.active::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin: 5px auto 0;
+    border-radius: 50%;
+    background-color: #7C3AED;
+}
+
 @media (max-width: 992px) {
 
     .hero {
@@ -643,25 +664,7 @@ header {
         border-color 0.3s ease;
 }
 
-header.scrolled {
-    background-color: rgba(11, 15, 20, 0.9);
-    border-bottom: 1px solid #1F2937;
-    backdrop-filter: blur(10px);
-}
 
-.nav-links a.active {
-    color: var(--text);
-}
-
-.nav-links a.active::after {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 5px;
-    margin: 5px auto 0;
-    border-radius: 50%;
-    background-color: #7C3AED;
-}
 
 @keyframes fadeUp {
     from {
